@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root "products#index"
+   resources:products do
+    collection do
+      get 'search'
+  end
+end
+  root 'products#index'
+  get '/details/:id' => 'products#details', as: :details
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
