@@ -8,7 +8,9 @@ ActiveAdmin.register Product do
     selectable_column
     id_column
     column :name
-    column :image
+    column "image", :sortable => false do |md|
+      "<img src='#{md.image.url}' alt='md image' style='height:48px; display: block;'".html_safe
+    end
     column :description
     column :price
     column :year
@@ -22,18 +24,20 @@ ActiveAdmin.register Product do
   filter :price
 
   # Các thuộc tính sẽ được hiển thị để Admin nhập giá trị
-  form do |f|
+  form html:  { multipart: true } do |f|
     f.inputs "Product Details" do
       f.input :name
-      f.input :image
+      #f.input :image
+      f.file_field :image
+
       f.input :description
       f.input :price
       f.input :year
      f.collection_select :category_id, Category.all,:id ,:name, {promt: "choose a category"}
      # f.input :feature, as: :check_box_tag
      # f.check_box_tag 'remember', '', false, :class => 'checkbox'
+
     end
     f.actions
   end
-
 end
