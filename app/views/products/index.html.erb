@@ -520,16 +520,7 @@
             </div>
 		</div>
 
-<%= form_tag search_products_path, method: :get, class: 'search-nav', role: "search" do %>
-<p>
-	<%= text_field_tag :search, params[:search], class: "form-control" %>
-	<%= submit_tag "Search", name: nil, class: "btn btn-default" %> 
-</p>
-<% end %>
-<%  @products.each do |product| %>
-	<%=link_to product.name, details_path(product)%>
-<% end %>
-   <%= will_paginate @products, previous_label: "truoc", next_label: "sau" %>
+
 	</div>
 	<div class="right-row col-md-4">
 		
