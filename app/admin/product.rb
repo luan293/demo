@@ -30,7 +30,7 @@ ActiveAdmin.register Product do
       #f.input :image
       f.file_field :image
 
-      f.input :description
+      f.input :description, :as => :ckeditor
       f.input :price
       f.input :year
      f.collection_select :category_id, Category.all,:id ,:name, {promt: "choose a category"}

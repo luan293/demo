@@ -115,16 +115,16 @@
     <!-- img -->
     
     <div class="col-lg-7 col-sm-12">
-        <span id="gallery"> <a href="#"><%=image_tag(@products.image, class: "img-reponsive")%></a></span> 
+        <span id="gallery"> <a href="#"><%=image_tag(@products.image, class: "img-responsive")%></a></span> 
     </div>
     <!-- img -->
     <div class="col-md-5 col-sm-12">
         <ul class="detail-info">
 
             <li> <h2><%=@products.name%></h2></li>
-            <li><strong>Giá</strong> <span><%=@products.price%></span> VNĐ</li>
+            <li><strong>Giá</strong> <span><%= @products.price %></span> VNĐ</li>
 
-        </ul>%>
+        </ul>
     </div>
 
    <div class="col-md-12">
@@ -142,19 +142,7 @@
         </ul>
         <div class="tab-content detail-product-tab-content">
 			<div id="tab1" class="col-lg-12 tab-pane fade in active"> <p>
-				<strong>Toyota Altis</strong> 1.8 số sàn là phiên bản có giá thấp nhất trong số 3 phiên bản xe Altis tại Việt nam. Đây cũng là mẫu xe bán chạy nhất và khách hàng chủ yếu là các gia đình, các công ty, doanh nghiệp, các đơn vị nhà nước (một lý do là Ngân sách nhà nước cho mua sắm công phù hợp với chiếc xe này). Ngoài ra các khách hàng tại các tỉnh cũng rất khoái chiếc xe này bởi khả năng đi được nhiều địa hình phức tạp và khả năng tiết kiệm nhiên liệu hơn hai bản số tự động còn lại. Toyota Altis thế hệ mới 2015 được ra mắt vào tháng 09/2014 với nhiều cải tiến về thiết kế nội ngoại thất.</p>
-				<p>
-					<img class="img-responsive" alt="altis-1.8-mt-so-san" src="img/vios-j.jpg"></p>
-				<p>
-					Nhìn bề ngoài bản số sàn này không khác gì bản số tự động 1.8. Kích thước của cả 3 mẫu xe ôtô altis đều là: 4620x1775x1460mm và chiều dài cơ sở là 2700mm, tức là lớn hơn khá nhiều so với phiên bản cũ, giúp chiếc xe bề thế và rộng rãi hơn.</p>
-				<p>
-					<em>Toyota Altis</em> 1.8 MT thế hệ mới cũng sử dụng động cơ công nghệ tiên tiến nhất của Toyota thời điểm hiện tại, đó là hệ thống điều phối van biến thiên thông minh kép Dual VVT-i (hệ thống điều khiển thông minh cả thời điểm đóng mở của van nạp và can xả động cơ, giúp động cơ mạnh mẽ hơn đồng thời tiết kiệm nhiên liệu và thải khí sạch hơn). Ngoài ra hộp số của thế hệ mới này là hộp số sàn 6 cấp, có khác biệt so với 5 cấp của altis đời cũ. Tiêu chuẩn khí thải của động cơ là Euro 2.</p>
-				<p>
-					Nội thất bao gồm: ghế nỉ cao cấp, đầu CD, điều hòa chỉnh tay, đồng hồ trung tâm optitron có chế độ thông báo ECO (tiết kiệm nhiên liệu), đồng hồ đa thông tin cung cấp các thông tin về nhiên liệu và vận hành, giúp người lái nắm bắt được tình trạng hiện tại của xư....</p>
-				<p>
-					Hệ thống an toàn đầy đủ không kém gì xe Toyota Camry với phanh ABS, EBD, BA, cảm biến lùi, khung xe GOA, cột lái tự đổ, bàn đạp phanh tự đổ, cấu trúc giảm chấn thương đầu và đốt sống cổ...</p>
-				<p>
-					Giá xe <a href="#">Toyota altis</a> 1.8 MT số sàn là 757.000.000 VNĐ (đã bao gồm VAT), một mức giá khá hấp dẫn.</p>				
+				<%=CGI.unescapeHTML(@products.description).html_safe %>	
 			</div>
 			<div id="tab2" class="col-lg-12 tab-pane fade in"> </div>
 			<div id="tab3" class="col-lg-12 tab-pane fade in"> </div>
@@ -190,6 +178,12 @@
             <a href="#">gia-oto-altis</a>,
         </h2>
     </div>
+    <div class="col-lg-12 tag-detail"> 
+		<span>Comments</span>
+       <%= content_tag :div, '', :class => "fb-comments", "data-href" => request.original_url, "data-numposts" => "5", "data-colorscheme" => "light" %>
+    </div>
+    
+
 
   </div>
 		
@@ -294,4 +288,12 @@
 </div>
   
 </body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1397110283902092";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </html>

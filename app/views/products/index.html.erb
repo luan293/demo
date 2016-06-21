@@ -11,7 +11,7 @@
     <div id="branding_bar" class="row">
 		<div id="branding " class="col-md-3 col-sm-3 col-xs-3">
 			<div id="logo_head" class="cf">
-				<a href="/" class="logo fn url" ><%=image_tag("logo.png", class: "img-reponsive")%></a>
+				<a href="/" class="logo fn url" ><%=image_tag("logo.png", class: "img-responsive")%></a>
 			</div>
 		</div>
     
@@ -119,57 +119,53 @@
 	</ul>
 	<div class="tab-content">
 			  <div id="home" class="tab-pane fade in active ">
-				<div class="row col-md-3 col-sm-6 imgcar"> 					
-					
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
-					<span class="col-md-12">Crossovers</span> 					
-				</div>
-				<div class="row col-md-3 col-sm-6 imgcar"> 					
 				
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+				<div class="row col-md-3 col-sm-6 imgcar"> 					
+					
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
-			<div class="row col-md-3 col-sm-6 imgcar"> 					
+				<div class="row col-md-3 col-sm-6 imgcar"> 					
 					
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
-				<div class="row col-md-3 col-sm-6 imgcar"> 
+				<div class="row col-md-3 col-sm-6 imgcar"> 					
 					
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
 							
 				
-				<a data-toggle="collapse" data-target="#demo" class="expand" >Show/Hide</a>
+				<a data-toggle="collapse" data-target="#demo" class="expand col-md-12" >Show/Hide</a>
 				
 				<div id="demo" class="collapse">
-					<div class="row col-md-3 col-sm-6 imgcar"> 					
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+				<div class="row col-md-3 col-sm-6 imgcar"> 					
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 				
 				</div>
 				<div class="row col-md-3 col-sm-6 imgcar"> 
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
 				<div class="row col-md-3 col-sm-6 imgcar"> 
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
 				<div class="row col-md-3 col-sm-6 imgcar"> 
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
 				<div class="row col-md-3 col-sm-6 imgcar"> 
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
 				<div class="row col-md-3 col-sm-6 imgcar"> 
-					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+					<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
 				<div class="row col-md-3 col-sm-6 imgcar"> 
-<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-reponsive")%>
+<%=image_tag("vios-j.jpg", class: "carimg col-md-12 img-responsive")%>
 					<span class="col-md-12">Crossovers</span> 					
 				</div>
 				</div>
@@ -419,12 +415,12 @@
             </h3>
 			<div class="data cf ">
 			<% i=1 %>
-				<%  @cate1.each do |product| if i<3%>
+				<%  @products.each do |product| if i<3%>
 			
                 <article class="item pRel col-md-4">
                 
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016" class="thumb">
-                        <%=image_tag(product.image, class: "img-reponsive")%>
+                        <%=image_tag(product.image, class: "img-responsive")%>
                     </a>
                     
                     <h4 class="rs pAbs title">
@@ -453,7 +449,7 @@
 			<div class="data cf ">
                 <article class="item pRel col-md-4">
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016" class="thumb">
-                         <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-reponsive")%>
+                         <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-responsive")%>
                     </a>
                     <h4 class="rs pAbs title">
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016">Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016</a>
@@ -461,7 +457,7 @@
                 </article>
 				 <article class="item pRel col-md-4">
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016" class="thumb">
-                        <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-reponsive")%>
+                        <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-responsive")%>
                     </a>
                     <h4 class="rs pAbs title">
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016">Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016</a>
@@ -490,7 +486,7 @@
 			<div class="data cf ">
                 <article class="item pRel col-md-4">
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016" class="thumb">
-                         <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-reponsive")%>
+                         <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-responsive")%>
                     </a>
                     <h4 class="rs pAbs title">
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016">Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016</a>
@@ -498,7 +494,7 @@
                 </article>
 				 <article class="item pRel col-md-4">
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016" class="thumb">
-                        <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-reponsive")%>
+                        <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-responsive")%>
                     </a>
                     <h4 class="rs pAbs title">
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016">Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016</a>
