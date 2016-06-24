@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-	#searchkick
+	searchkick
 	belongs_to :category
 	belongs_to :feature
 	has_attached_file :image, styles: { medium: "300x300>" }
