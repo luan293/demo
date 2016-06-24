@@ -131,6 +131,13 @@
 	margin-bottom:10px;
 
 }
+.searchf{
+    width: 50% !important;
+    margin-left:10%;
+}
+.btnf{
+    margin-left: 20px !important;
+}
 .imgcar{
 	margin-left:5px;
 }
