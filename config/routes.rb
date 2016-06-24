@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
    resources:products do
     collection do
-      get 'search'
+     get 'search'
       get 'tag'
   end
 end
