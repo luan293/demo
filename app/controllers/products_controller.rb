@@ -6,8 +6,11 @@ class ProductsController < ApplicationController
   	@cate2= Product.where(category_id: 2).order('id DESC')
   	@cate3= Product.where(category_id: 3).order('id DESC')
   	
-    @ss = Product.where(category_id: 1).offset(2).all.limit(3).order('id DESC')
-    @feature = Product.where(feature_id: 4).offset(0).all.limit(3).order('id DESC')
+    @s1 = Product.where(category_id: 1).offset(2).all.limit(3).order('id DESC')
+    @s2 = Product.where(category_id: 1).offset(2).all.limit(3).order('id DESC')
+    @s3 = Product.where(category_id: 1).offset(2).all.limit(3).order('id DESC')
+    @s = Product.all.offset(2).all.limit(3).order('id DESC')
+    @feature = Product.where(feature_id: 1).offset(0).all.limit(4).order('id DESC')
     
   end
   

@@ -408,7 +408,7 @@
                 <% i=i+1 end end%>
 				
                 <ul class="rs other col-md-4">
-                <%  @ss.each do |product| %>
+                <%  @s.each do |product| %>
                     <li>
                     	<%=link_to product.name ,details_path(product),:class=> ""%>
                     </li>		
@@ -424,35 +424,30 @@
 				<a href="#"><span>Tin khuyến mãi<span></a>
             </h3>
 			<div class="data cf ">
+                	<% i=1 %>
+				<%  @cate1.each do |product| if i<3%>
+			
                 <article class="item pRel col-md-4">
+                
                     <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016" class="thumb">
-                         <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-responsive")%>
+                        <%=image_tag(product.image, class: "img-responsive")%>
                     </a>
+                    
                     <h4 class="rs pAbs title">
-                    <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016">Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016</a>
+                    <%=link_to product.name, details_path(product)%>
                     </h4>
                 </article>
-				 <article class="item pRel col-md-4">
-                    <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016" class="thumb">
-                        <%=image_tag("xe-toyota-prado-mau-den.jpg", class: "img-responsive")%>
-                    </a>
-                    <h4 class="rs pAbs title">
-                    <a href="#" title="Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016">Giá xe Toyota Land Cruiser sẽ tăng mạnh từ 1/7/2016</a>
-                    </h4>
-                </article>
-
-				<articl
+				 
+                <% i=i+1 end end%>
+				
                 <ul class="rs other col-md-4">
+                <%  @s1.each do |product| %>
                     <li>
-                        <a href="#" title="Toyota Altis màu trắng tại đại lý Toyota Mỹ Đình">Toyota Altis màu trắng tại đại lý Toyota Mỹ Đình</a>
-                    </li>
-					 <li>
-                        <a href="#" title="Toyota Altis màu trắng tại đại lý Toyota Mỹ Đình">Toyota Altis màu trắng tại đại lý Toyota Mỹ Đình</a>
-                    </li>
-					 <li>
-                        <a href="#" title="Toyota Altis màu trắng tại đại lý Toyota Mỹ Đình">Toyota Altis màu trắng tại đại lý Toyota Mỹ Đình</a>
-                    </li>
+                    	<%=link_to product.name ,details_path(product),:class=> ""%>
+                    </li>		
+                    <% end %>			
                 </ul>
+
             </div>
 		</div>
 
