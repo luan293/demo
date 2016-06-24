@@ -551,17 +551,14 @@
 		  </div>
 		  <div class="main-box">
 			 <ul class="menu2">
-							<li><a href="#">Thị trường ô tô Việt nam 2015</a></br>
-				   <span>20/5/2015</span>
-				</li>
-							<li><a href="#">Thị trường ô tô Việt nam 2014</a></br>
-				   <span>20/5/2015</span>
-				</li>
-							<li><a href="#">Bản tin VAMA và thị trường ô tô Việt nam năm 2013</a></br>
-				   <span>20/5/2015</span>
-				</li>
-							<li><a href="#">Hỗ trợ tài chính</a></br>
-				   <span>20/5/2015</span>
+				 <%  @feature.each do |product| %>
+                    <li>
+                    
+                    	<%=link_to product.name, details_path(product)%>
+
+                    </li>		
+                    <% end %>			
+                </ul>
 				</li>
 			</ul>
 		  </div>
@@ -582,7 +579,12 @@
 		
 		
 	</div>
-
+<%= form_tag search_products_path, method: :get,class:"", role: "search" do %>
+<p>
+	<%= text_field_tag :search, params[:search], class:"form-control"%>
+	<%= submit_tag "search", name: nil, class: "btn btn-u-default" %>
+</p>
+<% end %>
 
 </div>
 </div>

@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :description
       t.integer :price
       t.integer :year
-
+      
       t.timestamps null: false
     end
   end

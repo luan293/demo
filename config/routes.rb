@@ -5,6 +5,7 @@ Rails.application.routes.draw do
    resources:products do
     collection do
       get 'search'
+      get 'tag'
   end
 end
   root 'products#index'
