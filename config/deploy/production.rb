@@ -59,3 +59,4 @@
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+server '13.76.88.104', user: 'vnits', roles: %w{web app}
