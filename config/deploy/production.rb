@@ -1,6 +1,6 @@
 user = 'vnits'
 ip_address = '13.76.88.104'
-roles: %w{web app}
+
 #role :app, ["#{user}@#{ip_address}"]
 #role :web, ["#{user}@#{ip_address}"]
 #role :db,  ["#{user}@#{ip_address}"]
