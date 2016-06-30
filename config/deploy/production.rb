@@ -5,9 +5,9 @@ ip_address = '13.76.88.104'
 #role :web, ["#{user}@#{ip_address}"]
 #role :db,  ["#{user}@#{ip_address}"]
  
-#server ip_address,
-#       user: user,
-#       roles: %w{web app}
+server ip_address,
+       user: user,
+       roles: %w{web app}
  
 #set :rails_env, 'production'
  
